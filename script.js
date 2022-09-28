@@ -20,9 +20,9 @@ class Display {
     const row = document.createElement('tr');
 
     row.innerHTML = `
-      <td>${book.title}</td>
-      <td>${book.author}</td>
-      <td><a href="#" class="delete">X</a></td>
+      <td id="col1">"${book.title}" by</td>
+      <td id="col2">${book.author}</td>
+      <td id="col3"><a href="#" class="delete">Remove</a></td>
     `;
 
     list.appendChild(row);
