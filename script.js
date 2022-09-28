@@ -1,4 +1,3 @@
-
 class Book {
   constructor(title, author) {
     this.title = title;
@@ -69,7 +68,6 @@ class Display {
     document.querySelector('#author').value = '';
   }
 }
-
 
 document.addEventListener('DOMContentLoaded', Display.showBooks);
 
