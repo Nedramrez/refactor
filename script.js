@@ -29,7 +29,7 @@ class Display {
   }
 
   static deleteBook(el) {
-    if(el.classList.contains('delete')) {
+    if (el.classList.contains('delete')) {
       el.parentElement.parentElement.remove();
     }
   }
@@ -63,7 +63,7 @@ class Storage {
     const collection = Storage.getBooks();
 
     collection.forEach((book, index) => {
-      if(book.author === author) {
+      if (book.author === author) {
         collection.splice(index, 1);
       }
     });
@@ -85,7 +85,7 @@ document.querySelector('#form').addEventListener('submit', (e) => {
   const author = document.querySelector('#author').value;
 
   // Validate
-  if(title === '' || author === '') {
+  if (title === '' || author === '') {
     Display.showAlert('Enter valid values for title and author fields, please.');
   } else {
     // Instatiate book
