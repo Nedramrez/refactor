@@ -1,3 +1,4 @@
+/* eslint-disable rule-you-want-to-disable */
 class Book {
   constructor(title, author) {
     this.title = title;
