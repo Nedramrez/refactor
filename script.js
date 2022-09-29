@@ -1,59 +1,95 @@
-const form = document.querySelector('#form');
-const title = document.getElementById('title');
-const author = document.getElementById('author');
-const bookList = document.getElementById('books-list');
-let collection = JSON.parse(localStorage.getItem('collection')) || [];
-let book = [{
-  title: 'Alpen',
-  author: 'Zalpen',
-  id: 1234574,
-}];
-
-function newBook() {
-  book = {
-    title: title.value,
-    author: author.value,
-    idNumber: Math.floor(Math.random() * 1000000),
-  };
-  collection.push(book);
-  localStorage.setItem('collection', JSON.stringify(collection));
-}
-
-function deleteBook(idNumber) {
-  collection = collection.filter((books) => books.idNumber !== idNumber);
-  localStorage.setItem('collection', JSON.stringify(collection));
-}
-
-function printCollection(book) {
-  const tableRow = document.createElement('tr');
-  const newTitle = document.createElement('td');
-  const newAuthor = document.createElement('td');
-  const deleteButton = document.createElement('button');
-  newTitle.innerText = book.title;
-  newAuthor.innerText = book.author;
-  deleteButton.innerHTML = 'Delete';
-  tableRow.append(newTitle, newAuthor, deleteButton);
-  bookList.append(tableRow);
-  deleteButton.addEventListener('click', () => {
-    deleteButton.parentElement.remove();
-    deleteBook(book.idNumber);
-  });
-}
-
-collection.forEach(printCollection);
-
-form.addEventListener('submit', (event) => {
-  event.preventDefault();
-  if (title.value !== '' && author.value !== '') {
-    newBook();
-    printCollection(book);
-    form.reset();
-  } else {
-    alert('Enter valid values for title and author fields, please.');
+/* eslint-disable max-classes-per-file */
+class Book {
+  constructor(title, author) {
+    this.title = title;
+    this.author = author;
   }
-<<<<<<< Updated upstream
-});
-=======
+}
+
+class Storage {
+  static getBooks() {
+    let collection;
+    if (localStorage.getItem('collection') === null) {
+      collection = [];
+    } else {
+      collection = JSON.parse(localStorage.getItem('collection'));
+    }
+
+    return collection;
+  }
+
+  static newBook(book) {
+    const collection = Storage.getBooks();
+    collection.push(book);
+    localStorage.setItem('collection', JSON.stringify(collection));
+  }
+
+  static delBook(author) {
+    const collection = Storage.getBooks();
+
+    collection.forEach((book, index) => {
+      if (book.author === author) {
+        collection.splice(index, 1);
+      }
+    });
+
+    localStorage.setItem('collection', JSON.stringify(collection));
+  }
+}
+
+class Display {
+  static showBooks() {
+    const collection = Storage.getBooks();
+
+    collection.forEach((book) => Display.printCollection(book));
+  }
+
+  static printCollection(book) {
+    const bookList = document.querySelector('#books-list');
+
+    const tableRow = document.createElement('tr');
+    const dataCell = document.createElement('td');
+    const dataCell2 = document.createElement('td');
+    const button = document.createElement('button');
+    dataCell.innerHTML = ` <span>"${book.title}"</span> by <span>${book.author}</span> `;
+    tableRow.append(dataCell);
+    tableRow.append(dataCell2);
+    dataCell2.append(button);
+    button.classList.add('delete');
+    button.innerText = 'Remove';
+    bookList.appendChild(tableRow);
+  }
+
+  static deleteBook(el) {
+    if (el.classList.contains('delete')) {
+      el.parentElement.parentElement.remove();
+    }
+  }
+
+  static clearFields() {
+    document.querySelector('#title').value = '';
+    document.querySelector('#author').value = '';
+  }
+}
+
+document.addEventListener('DOMContentLoaded', Display.showBooks);
+
+document.querySelector('#form').addEventListener('submit', (e) => {
+  e.preventDefault();
+  const title = document.querySelector('#title').value;
+  const author = document.querySelector('#author').value;
+
+  if (title === '' || author === '') {
+    Display.showAlert('Enter valid values for title and author fields, please.');
+  } else {
+    const book = new Book(title, author);
+
+    Display.printCollection(book);
+
+    Storage.newBook(book);
+
+    Display.clearFields();
+  }
 });
 
 document.querySelector('#books-list').addEventListener('click', (e) => {
@@ -61,6 +97,3 @@ document.querySelector('#books-list').addEventListener('click', (e) => {
 
   Storage.delBook(e.target.parentElement.previousElementSibling.lastElementChild.textContent);
 });
-
-// Display
->>>>>>> Stashed changes

@@ -5,60 +5,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Awesome books</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-<<<<<<< Updated upstream
-    <h1>Awesome books</h1>
-    <section>
-=======
+    
+    <!-- Navigation bar -->
+    
     <header class="nav-sect">
       <nav class="nav-bar">
         <h2 class="logo">Awesome Books</h2>
       <ul class="nav-items">
-        <li class="nav-item"><a href="" class="nav-link">List</a></li>
+        <li class="nav-item"><a href="" class="nav-link" id="list">List</a></li>
         <div class="dividerx">|</div>
-        <li class="nav-item"><a href="" class="nav-link">Add New</a></li>
+        <li class="nav-item"><a href="" class="nav-link" id="add-new">Add New</a></li>
         <div class="dividerx">|</div>
-        <li class="nav-item"><a href="" class="nav-link">Contact Us</a></li>
+        <li class="nav-item"><a href="" class="nav-link" id="contact">Contact Us</a></li>
       </ul>
     </nav>
     </header>
+
+    <!-- Books Collection page-->
+
     <section id="listPage">
-    <h1>All Awesome Books</h1>
-   
->>>>>>> Stashed changes
+      <h1>All Awesome Books</h1>
       <table>
-        <tr>
-          <th>Book Title</th>
-          <th>Book Author</th>
-          <th></th>
-        </tr>
         <tbody id= "books-list"></tbody>
       </table>
     </section>
-    <hr>
-    <br>
-<<<<<<< Updated upstream
-=======
-    <div class="divider"></div>
+
+    <!-- Add New Book page -->
 
     <section id="addPage">
-    <h2>Add a new book</h2>
->>>>>>> Stashed changes
-    <form id="form">
-      <div>
-        <input type="text" placeholder="Title" id="title">
-      </div>
-      <br>
-      <div>
-        <input type="text" placeholder="Author" id="author">
-      </div>
-      <br>
-      <input type="submit" value="Add book" id="submit">
-      <br>
-    </form>
-  </section>
-  
+      <h2>Add a new book</h2>
+      <form id="form">
+        <div>
+          <input type="text" placeholder="Title" id="title">
+        </div>
+        <br>
+        <div>
+          <input type="text" placeholder="Author" id="author">
+        </div>
+        <br>
+        <input type="submit" value="Add book" id="submit">
+        <br>
+      </form>
+    </section>
+
+    <!-- Contact Page -->
+
     <section id="contactPage">
       <h2>Contact Information</h2>
       <h3>If you have any inquiries feel free to contact us</h3>
@@ -68,8 +62,11 @@
         <li>Our address: 123, Anywhere, country</li>
       </ul>
     </section>
+
+    <!-- Footer -->
+
     <footer class="copyright">
-     <h3>Copyright...</h3>
+      <h3>Copyright...</h3>
     </footer>
     <script src="script.js"></script>
   </body>
