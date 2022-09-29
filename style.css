@@ -67,6 +67,11 @@ section {
   display: block;
 }
 
+.button {
+  border: 0;
+  background-color: white;
+}
+
 .list-page {
   display: flex;
   justify-content: space-between;

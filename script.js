@@ -108,3 +108,27 @@ function addButton() {
 
 const addBtn = document.querySelector('#add-new');
 addBtn.addEventListener('click', addButton);
+
+function listButton() {
+  const addPage = document.getElementById('addPage');
+  addPage.style.display = 'none';
+  const contactPage = document.getElementById('contactPage');
+  contactPage.style.display = 'none';
+  const listPage = document.getElementById('listPage');
+  listPage.style.display = 'block';
+}
+
+const listBtn = document.querySelector('#list');
+listBtn.addEventListener('click', listButton);
+
+function contactButton() {
+  const addPage = document.getElementById('addPage');
+  addPage.style.display = 'none';
+  const contactPage = document.getElementById('contactPage');
+  contactPage.style.display = 'block';
+  const listPage = document.getElementById('listPage');
+  listPage.style.display = 'none';
+}
+
+const contactBtn = document.querySelector('#contact');
+contactBtn.addEventListener('click', contactButton);
