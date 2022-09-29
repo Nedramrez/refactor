@@ -32,17 +32,18 @@ table {
   min-width: 300px;
 }
 
-th, td {
+th,
+td {
   text-align: left;
   padding: 8px;
 }
 
 tr:nth-child(even) {
-  background-color: Lightgreen;
+  background-color: lightgreen;
 }
 
 .divider {
-  background-color: Lightgreen;
+  background-color: lightgreen;
   width: 100px;
   height: 2px;
   margin: 0 0 20px;
