@@ -94,6 +94,17 @@ document.querySelector('#form').addEventListener('submit', (e) => {
 
 document.querySelector('#books-list').addEventListener('click', (e) => {
   Display.deleteBook(e.target);
-
   Storage.delBook(e.target.parentElement.previousElementSibling.lastElementChild.textContent);
 });
+
+function addButton() {
+  const addPage = document.getElementById('addPage');
+  addPage.style.display = 'flex';
+  const contactPage = document.getElementById('contactPage');
+  contactPage.style.display = 'none';
+  const listPage = document.getElementById('listPage');
+  listPage.style.display = 'none';
+}
+
+const addBtn = document.querySelector('#add-new');
+addBtn.addEventListener('click', addButton);
