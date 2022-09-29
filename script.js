@@ -51,4 +51,16 @@ form.addEventListener('submit', (event) => {
   } else {
     alert('Enter valid values for title and author fields, please.');
   }
+<<<<<<< Updated upstream
 });
+=======
+});
+
+document.querySelector('#books-list').addEventListener('click', (e) => {
+  Display.deleteBook(e.target);
+
+  Storage.delBook(e.target.parentElement.previousElementSibling.lastElementChild.textContent);
+});
+
+// Display
+>>>>>>> Stashed changes
