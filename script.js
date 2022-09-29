@@ -6,6 +6,9 @@ class Book {
   }
 }
 
+const dt = new Date();
+document.getElementById('date-time').innerHTML=dt;
+
 class Storage {
   static getBooks() {
     let collection;
