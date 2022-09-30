@@ -7,7 +7,7 @@ class Book {
 }
 
 const dt = new Date();
-document.getElementById('date-time').innerHTML=dt;
+document.getElementById('date-time').innerHTML = dt;
 
 class Storage {
   static getBooks() {
@@ -135,4 +135,3 @@ function contactButton() {
 
 const contactBtn = document.querySelector('#contact');
 contactBtn.addEventListener('click', contactButton);
-
