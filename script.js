@@ -128,7 +128,7 @@ function contactButton() {
   const addPage = document.getElementById('addPage');
   addPage.style.display = 'none';
   const contactPage = document.getElementById('contactPage');
-  contactPage.style.display = 'block';
+  contactPage.style.display = 'flex';
   const listPage = document.getElementById('listPage');
   listPage.style.display = 'none';
 }
