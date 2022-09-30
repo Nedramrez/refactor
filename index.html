@@ -8,35 +8,79 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <h1>All Awesome Books</h1>
-    <section>
+    
+    <!-- Navigation bar -->
+    
+    <header class="nav-sect">
+      <nav class="nav-bar">
+        <h3 class="logo">Awesome Books</h3>
+      <ul class="nav-items">
+        <li class="nav-item">
+
+          <button class="nav-link button" id="list">List</button>
+        </li>
+        <div class="dividerx">|</div>
+        <li class="nav-item">
+
+          <button class="nav-link button" id="add-new">Add new </button>
+        </li>
+        <div class="dividerx">|</div>
+        <li class="nav-item">
+
+            <button class="nav-link button" id="contact">Contact Us</button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  <div class="date">
+    <div id='date-time'></div>
+  </div>
+  
+    <!-- Books Collection page-->
+
+    <section class="list-page" id="listPage">
+      <h1>All Awesome Books</h1>
       <table>
-        <thead>
-          <tr>
-            <!-- <th>Book Title</th>
-            <th>Book Author</th>
-            <th></th> -->
-          </tr>
-        </thead>
         <tbody id= "books-list"></tbody>
       </table>
     </section>
-    <hr>
-    <br>
-    <div class="divider"></div>
-    <h2>Add a new book</h2>
-    <form id="form">
-      <div>
-        <input type="text" placeholder="Title" id="title">
-      </div>
-      <br>
-      <div>
-        <input type="text" placeholder="Author" id="author">
-      </div>
-      <br>
-      <input type="submit" value="Add book" id="submit">
-      <br>
-    </form>
+
+    <!-- Add New Book page -->
+
+    <section class="add-page" id="addPage">
+      <h2 class="add-new-book" id="addNewBook">Add a new book</h2>
+      <form id="form">
+        <div>
+          <input type="text" placeholder="Title" id="title">
+        </div>
+        <br>
+        <div>
+          <input type="text" placeholder="Author" id="author">
+        </div>
+        <br>
+        <input type="submit" value="Add book" id="submit">
+        <br>
+      </form>
+    </section>
+
+    <!-- Contact Page -->
+
+    <section class="contact-page" id="contactPage">
+      <h2>Contact Information</h2>
+      <p>If you have any inquiries feel free to contact us</p>
+      <ul>
+        <li>Our email: email@email.com</li>
+        <li>Our phone Number: +123 456 789</li>
+        <li>Our address: 123, Anywhere, country</li>
+      </ul>
+    </section>
+
+    <!-- Footer -->
+
+    <footer class="copyright">
+      <h3>Copyright...</h3>
+    </footer>
+
     <script src="script.js"></script>
   </body>
 </html>

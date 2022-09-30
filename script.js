@@ -6,6 +6,9 @@ class Book {
   }
 }
 
+const dt = new Date();
+document.getElementById('date-time').innerHTML = dt;
+
 class Storage {
   static getBooks() {
     let collection;
@@ -94,6 +97,41 @@ document.querySelector('#form').addEventListener('submit', (e) => {
 
 document.querySelector('#books-list').addEventListener('click', (e) => {
   Display.deleteBook(e.target);
-
   Storage.delBook(e.target.parentElement.previousElementSibling.lastElementChild.textContent);
 });
+
+function addButton() {
+  const addPage = document.getElementById('addPage');
+  addPage.style.display = 'flex';
+  const contactPage = document.getElementById('contactPage');
+  contactPage.style.display = 'none';
+  const listPage = document.getElementById('listPage');
+  listPage.style.display = 'none';
+}
+
+const addBtn = document.querySelector('#add-new');
+addBtn.addEventListener('click', addButton);
+
+function listButton() {
+  const addPage = document.getElementById('addPage');
+  addPage.style.display = 'none';
+  const contactPage = document.getElementById('contactPage');
+  contactPage.style.display = 'none';
+  const listPage = document.getElementById('listPage');
+  listPage.style.display = 'block';
+}
+
+const listBtn = document.querySelector('#list');
+listBtn.addEventListener('click', listButton);
+
+function contactButton() {
+  const addPage = document.getElementById('addPage');
+  addPage.style.display = 'none';
+  const contactPage = document.getElementById('contactPage');
+  contactPage.style.display = 'flex';
+  const listPage = document.getElementById('listPage');
+  listPage.style.display = 'none';
+}
+
+const contactBtn = document.querySelector('#contact');
+contactBtn.addEventListener('click', contactButton);

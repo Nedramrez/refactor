@@ -9,15 +9,95 @@ body {
   flex-direction: column;
   align-items: center;
   width: 100vw;
+  height: 100vw;
   font-family: 'Arial', sans-serif;
 }
 
-h1 {
-  padding-bottom: 30px;
+section {
+  width: 95%;
+}
+
+.logo {
+  padding: 0 0 0 15px;
+}
+
+.nav-sect {
+  width: 95%;
+  border: 3px solid #000;
+  margin: 10px 0 0 0;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.nav-items {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-item {
+  list-style-type: none;
+  padding-right: 30px;
+}
+
+.dividerx {
+  padding-right: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.date {
+  display: flex;
+  text-align: end;
+  justify-content: end;
+  padding: 10px 0;
+  width: 95%;
+}
+
+#addPage {
+  display: none;
+}
+
+.add-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 h2 {
-  margin: 0 0 20px;
+  padding: 30px 0;
+}
+
+#listPage {
+  display: block;
+}
+
+p {
+  padding: 0 0 30px;
+}
+
+.button {
+  border: 0;
+  background-color: white;
+}
+
+.list-page {
+  display: flex;
+  justify-content: space-between;
+}
+
+h1 {
+  padding: 30px;
+  text-align: center;
 }
 
 tr {
@@ -70,6 +150,7 @@ td {
 #col3 .delete {
   border: 2px solid black;
   margin-left: 20px;
+  padding: 10px;
 }
 
 #col3 a {
@@ -86,4 +167,21 @@ td {
 
 #submit {
   align-self: flex-end;
+}
+
+#contactPage {
+  display: none;
+}
+
+.contact-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.copyright {
+  border: 3px solid black;
+  margin-top: 20px;
+  width: 95%;
+  padding: 10px;
 }
