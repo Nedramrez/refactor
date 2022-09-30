@@ -135,3 +135,4 @@ function contactButton() {
 
 const contactBtn = document.querySelector('#contact');
 contactBtn.addEventListener('click', contactButton);
+
