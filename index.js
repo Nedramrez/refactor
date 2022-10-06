@@ -1,8 +1,9 @@
+import { DateTime } from './modules/luxon.js';
 import Book from './modules/book.js';
 import Display from './modules/display.js';
 import Storage from './modules/storage.js';
 
-const dt = new Date();
+const dt = DateTime.now().toLocaleString(DateTime.DATETIME_MED);
 document.getElementById('date-time').innerHTML = dt;
 document.addEventListener('DOMContentLoaded', Display.showBooks);
 
