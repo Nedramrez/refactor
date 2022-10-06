@@ -30,38 +30,38 @@ document.querySelector('#books-list').addEventListener('click', (e) => {
   Storage.delBook(e.target.parentElement.previousElementSibling.lastElementChild.textContent);
 });
 
-function addButton() {
+const addButton = () => {
   const addPage = document.getElementById('addPage');
   addPage.style.display = 'flex';
   const contactPage = document.getElementById('contactPage');
   contactPage.style.display = 'none';
   const listPage = document.getElementById('listPage');
   listPage.style.display = 'none';
-}
+};
 
 const addBtn = document.querySelector('#add-new');
 addBtn.addEventListener('click', addButton);
 
-function listButton() {
+const listButton = () => {
   const addPage = document.getElementById('addPage');
   addPage.style.display = 'none';
   const contactPage = document.getElementById('contactPage');
   contactPage.style.display = 'none';
   const listPage = document.getElementById('listPage');
   listPage.style.display = 'block';
-}
+};
 
 const listBtn = document.querySelector('#list');
 listBtn.addEventListener('click', listButton);
 
-function contactButton() {
+const contactButton = () => {
   const addPage = document.getElementById('addPage');
   addPage.style.display = 'none';
   const contactPage = document.getElementById('contactPage');
   contactPage.style.display = 'flex';
   const listPage = document.getElementById('listPage');
   listPage.style.display = 'none';
-}
+};
 
 const contactBtn = document.querySelector('#contact');
 contactBtn.addEventListener('click', contactButton);
