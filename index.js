@@ -1,3 +1,7 @@
+import Book from './modules/book.js';
+import Display from './modules/display.js';
+import Storage from './modules/storage.js';
+
 const dt = new Date();
 document.getElementById('date-time').innerHTML = dt;
 document.addEventListener('DOMContentLoaded', Display.showBooks);
