@@ -9,7 +9,7 @@
 
 # 📗 Table of Contents
 
-- [Awesome Books: with ES6](#awesome-books-ometman-and-zema)
+- [Awesome Books: with ES6](#awesome-books)
 - [📗 Table of Contents](#-table-of-contents)
 - [📖 Awesome Books: Ometman ](#-awesome-books-ometman-)
   - [🛠 Built With ](#-built-with-)
