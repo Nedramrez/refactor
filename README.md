@@ -11,7 +11,7 @@
 
 - [Awesome Books: with ES6](#awesome-books)
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 Awesome Books: Ometman ](#-awesome-books-ometman-)
+- [📖 Awesome Books: Ometman ](#-awesome-books)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
