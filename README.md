@@ -1,4 +1,4 @@
-# Awesome Books: Ometman and Zema
+# Awesome Books: With ES6
 <a name="readme-top"></a>
 
 <div align="center">
